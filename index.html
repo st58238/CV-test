@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Životopis</title>
+	<style media="screen">
+
+		:root {
+			--side-color: linear-gradient(to right, rgb(128, 255, 255) 92%, transparent);
+			--150: rgb(150, 150, 150);
+			--200: rgb(200, 200, 200);
+		}
+
+		html {
+			font-family: Helvetica, Arial, sans-serif;
+		}
+
+		body {
+			background-color: var(--200);
+			padding: 0;
+			margin: 0;
+		}
+
+		.main {
+			background-color: white;
+			min-height: 100vh;
+			margin: 0 auto;
+			width: 60%;
+			display: flex;
+			flex-direction: column;
+			z-index: 1;
+		}
+
+		.row {
+			display: flex;
+			flex-flow: row;
+			justify-content: space-between;
+			width: 100%;
+		}
+
+		.row:first-of-type {
+			margin-top: 20px;
+		}
+
+		.img_me {
+			width: 80px;
+			height: auto;
+			clip-path: circle(50% at center);
+			background-color: white;
+		}
+
+		.side_cont {
+			min-width: 16.5%;
+			max-width: 16.5%;
+			flex-grow: 1;
+			text-align: center;
+			z-index: 1000;
+		}
+
+		.content {
+			flex-grow: 1;
+			padding-left: 20px;
+		}
+
+		.table, .cell {
+			display: inline-flex;
+			justify-content: flex-start;
+		}
+
+		.table {
+			flex-wrap: wrap;
+		}
+
+		.w50 {
+			width: 50%;
+		}
+
+		.w100 {
+			width: 100%;
+		}
+
+		.cell > img {
+			width: auto;
+			height: 25px;
+			padding-top: 10px;
+			padding-right: 5px;
+		}
+
+		.cell > div.right_col_content > h4 {
+			margin-bottom: 2px;
+		}
+
+		.cell > div.right_col_content > p {
+			margin-top: 2px;
+			margin-bottom: 2px;
+		}
+
+		.left_content_col {
+			padding-top: 5px;
+			width: 20%;
+		}
+
+		.main_content_col {
+			padding-top: 5px;
+			padding-left: 30px;
+			width: 100%;
+		}
+
+		.side_color {
+			margin: 0;
+			padding: 0;
+			position: fixed;
+			top: 0;
+			left: 20%;
+			width: 10.5%;
+			background-image: var(--side-color);
+			height: 100%;
+		}
+
+		.detail {
+			color: var(--150);
+		}
+
+		hr.line {
+			position: relative;
+			width: 65%;
+			left: 8%;
+			margin-top: 16px;
+			color: var(--200);
+		}
+
+		.side_cont > h3 {
+			text-align: right;
+			padding-right: 10px;
+			margin-top: 18px;
+		}
+
+		ul {
+			list-style-type: disc;
+			padding-left: 0;
+		}
+
+		ul.tech > li, ul.hobby > li {
+			margin-bottom: -12px;
+		}
+
+		.footer {
+			width: 100%;
+			margin-top: 30px;
+		}
+
+		.align-right {
+			text-align: right;
+		}
+
+		.float-right {
+			float: right;
+		}
+
+		.date {
+			padding-right: 4%;
+		}
+
+		@media only screen and (max-width: 860px) {
+			.main {
+				width: 100%;
+			}
+
+			.side_color {
+				left: 0;
+				width: 18%;
+				height: 100%;
+			}
+
+			hr.line {
+				left: 0;
+				width: 100%;
+			}
+		}
+
+	</style>
+</head>
+<body>
+	<div class="side_color"></div>
+
+
+	<div class="main">
+		<div class="row">
+			<div class="side_cont">
+				<img class="img_me" src="img/me.png" alt="404">
+			</div>
+			<div class="content">
+				<h1>Lukáš&nbsp;Janáček</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="side_cont">
+			</div>
+			<div class="content table">
+				<div class="cell w50">
+					<img src="img/picto5.png" alt=""><p>2.&nbsp;2.&nbsp;1999</p>
+				</div>
+				<div class="cell w50">
+					<img src="img/picto2.png" alt=""><p>Strojová&nbsp;192, Mikulovice&nbsp;53002</p>
+				</div>
+				<div class="cell w50">
+					<img src="img/picto3.png" alt=""><p>+420&nbsp;487&nbsp;210&nbsp;531</p>
+				</div>
+				<div class="cell w50">
+					<img src="img/picto4.png" alt=""><p>temp0214783@seznam.cz</p>
+				</div>
+			</div>
+		</div>
+
+		<hr class="line" />
+
+		<div class="row">
+			<div class="side_cont">
+				<h3>Vzdělání</h3>
+			</div>
+			<div class="content table">
+				<div class="cell w100">
+					<div class="left_content_col">
+						<p>2018 - doposud</p>
+					</div>
+					<div class="right_col_content">
+						<h4>Univerzita Pardubice, Studentská&nbsp;95, 53210 Pardubice&nbsp;2</h4>
+						<p>Bakalářské studium, obor Informační technologie</p>
+						<p class="detail">B2646 Informační technologie - Informační technologie</p>
+					</div>
+				</div>
+				<div class="cell w100">
+					<div class="left_content_col">
+						<p>2014 - 2018</p>
+					</div>
+					<div class="right_col_content">
+						<h4>SPŠE a&nbsp;VOŠ Pardubice, Karla&nbsp;IV.&nbsp;13, 53002 Pardubice</h4>
+						<p>Obor Informační technologie - Programování a hardware</p>
+						<p class="detail">18-20-M/01 Informační technologie</p>
+					</div>
+				</div>
+				<div class="cell w100">
+					<div class="left_content_col">
+						<p>2005 - 2014</p>
+					</div>
+					<div class="right_col_content">
+						<h4>Základní škola Pardubice, Benešovo náměstí&nbsp;590, 53002 Pardubice</h4>
+						<p>Základní vzdělání</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<hr class="line" />
+		<div class="row">
+			<div class="side_cont">
+				<h3>Praxe</h3>
+			</div>
+			<div class="content table">
+				<div class="cell w100">
+					<div class="left_content_col">
+						<p>2018 - doposud</p>
+					</div>
+					<div class="right_col_content">
+						<h4>Obsluha a&nbsp;administrace systému pro výdej pohonných hmot</h4>
+						<p>Dopravní podnik města Pardubic a.&nbsp;s., Teplého&nbsp;2141, 53220 Pardubice</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr class="line" />
+
+		<div class="row">
+			<div class="side_cont">
+				<h3>Certifikáty</h3>
+			</div>
+			<div class="content table">
+				<div class="cell w100">
+					<div class="left_content_col">
+						<p>2019</p>
+					</div>
+					<div class="right_col_content">
+						<h4>CCNA&nbsp;R&S: Introduction to networks</h4>
+					</div>
+				</div>
+				<div class="cell w100">
+					<div class="left_content_col">
+						<p>2020</p>
+					</div>
+					<div class="right_col_content">
+						<h4>CCNA&nbsp;R&S: Routing and Switching Essentials</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr class="line" />
+
+		<div class="row">
+			<div class="side_cont">
+				<h3>Jazykové znalosti</h3>
+			</div>
+			<div class="content table">
+				<div class="cell w100">
+					<div class="left_content_col">
+					</div>
+					<div class="main_content_col">
+						<p>Anglický jazyk - úroveň&nbsp;C1</p>
+						<p>Německý jazyk - úroveň&nbsp;A1</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr class="line" />
+
+		<div class="row">
+			<div class="side_cont">
+				<h3>Řidičský průkaz</h3>
+			</div>
+			<div class="content table">
+				<div class="cell w100">
+					<div class="left_content_col">
+					</div>
+					<div class="main_content_col">
+						<p>B - Osobní automobil</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr class="line" />
+
+		<div class="row">
+			<div class="side_cont">
+				<h3>Technické dovednosti a&nbsp;znalosti</h3>
+			</div>
+			<div class="content table">
+				<div class="cell w100">
+					<div class="left_content_col">
+					</div>
+					<div class="main_content_col">
+						<ul class="tech">
+							<li><p>Velmi pokročilá zkušenost s&nbsp;moderními operačními systémy Microsoft Windows,</p></li>
+							<li><p>pokročilé znalosti síťových zařízení a&nbsp;jejich konfigurace,</p></li>
+							<li><p>základní zkušenost s&nbsp;UNIXovými systémy,</p></li>
+							<li><p>jazyky Java, C, C++, Python, HTML, PHP, JavaScript,</p></li>
+							<li><p>Microsoft Office,</p></li>
+							<li><p>databázové systémy.</p></li>
+						</ul>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<hr class="line" />
+
+		<div class="row">
+			<div class="side_cont">
+				<h3>Zájmy</h3>
+			</div>
+			<div class="content table">
+				<div class="cell w100">
+					<div class="left_content_col">
+					</div>
+					<div class="main_content_col">
+						<ul class="hobby">
+							<li><p>Lepení a&nbsp;sestavování plastikových modelů,</p></li>
+							<li><p>hraní deskových her,</p></li>
+							<li><p>plavání,</p></li>
+							<li><p>experimentování s&nbsp;mikrokontrolerem Arduino.</p></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row footer">
+			<p class="date w100 align-right">V Mikulovicích dne 8.&nbsp;10.&nbsp;2020</p>
+		</div>
+	</div>
+</body>
+</html>
